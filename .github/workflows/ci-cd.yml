@@ -18,6 +18,9 @@ jobs:
   quality-checks:
     runs-on: ubuntu-latest
     name: Code Quality Checks
+    defaults:
+      run:
+        working-directory: 'my-app'
     
     steps:
       - uses: actions/checkout@v4
@@ -26,18 +29,14 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
-          cache-dependency-path: './my-app/package-lock.json'
       
       - name: Install dependencies
-        working-directory: 'my-app'
         run: npm ci
       
       - name: Run ESLint
-        working-directory: 'my-app'
         run: npm run lint
       
       - name: Run Tests
-        working-directory: 'my-app'
         run: npm run test -- --run
   
   build-and-publish:
