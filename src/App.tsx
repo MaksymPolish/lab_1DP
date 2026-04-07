@@ -17,7 +17,7 @@ function App() {
   const [files, setFiles] = useState<UploadedFile[]>([])
   const [activeTab, setActiveTab] = useState<'counter' | 'upload'>('counter')
 
-  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000'
+  const API_URL = '/api'
 
   useEffect(() => {
     if (activeTab === 'upload') {
@@ -56,7 +56,7 @@ function App() {
     formData.append('file', file)
 
     try {
-      const response = await fetch(`${API_URL}/api/upload`, {
+      const response = await fetch(`${API_URL}/upload`, {
         method: 'POST',
         body: formData
       })
@@ -81,7 +81,7 @@ function App() {
 
   const fetchFiles = async () => {
     try {
-      const response = await fetch(`${API_URL}/api/files`)
+      const response = await fetch(`${API_URL}/files`)
       const data = await response.json()
       setFiles(Array.isArray(data) ? data : [])
     } catch (error) {
