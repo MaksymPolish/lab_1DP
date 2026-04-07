@@ -100,7 +100,7 @@ function App() {
   return (
     <>
       <div className="container">
-        <h1>🚀 Lab7 - Web App Dashboard</h1>
+<h1>Lab7 - Web App Dashboard</h1>
         <p className="subtitle">AWS EC2 + S3 + PostgreSQL Integration</p>
 
         <div className="tabs">
@@ -108,19 +108,19 @@ function App() {
             className={`tab-button ${activeTab === 'counter' ? 'active' : ''}`}
             onClick={() => setActiveTab('counter')}
           >
-            📊 Counter
+            Counter
           </button>
           <button
             className={`tab-button ${activeTab === 'upload' ? 'active' : ''}`}
             onClick={() => setActiveTab('upload')}
           >
-            📤 Image Gallery
+            Image Gallery
           </button>
         </div>
 
         {activeTab === 'counter' && (
           <div className="counter-section">
-            <h2>🎯 Click Counter</h2>
+            <h2>Click Counter</h2>
             <div className="counter-display">
               <div className="count-number">{count}</div>
               <p className="count-label">Total Clicks</p>
@@ -131,13 +131,13 @@ function App() {
                 className="click-button" 
                 onClick={() => setCount((count) => count + 1)}
               >
-                ➕ Click Me!
+                Click Me!
               </button>
               <button 
                 className="reset-button" 
                 onClick={resetCounter}
               >
-                ↻ Reset
+                Reset
               </button>
             </div>
           </div>
@@ -145,7 +145,7 @@ function App() {
 
         {activeTab === 'upload' && (
           <div className="upload-section">
-            <h2>📸 Upload Images to S3</h2>
+            <h2>Upload Images to S3</h2>
             
             <div className="upload-area">
               <input
@@ -156,14 +156,14 @@ function App() {
                 disabled={uploading}
               />
               <label htmlFor="fileInput" className="file-label">
-                {file ? `📁 ${file.name}` : '📤 Select Image to Upload'}
+                {file ? `${file.name}` : 'Select Image to Upload'}
               </label>
               <button
                 className="upload-button"
                 onClick={handleUpload}
                 disabled={!file || uploading}
               >
-                {uploading ? '⏳ Uploading...' : '🚀 Upload to S3'}
+                {uploading ? 'Uploading...' : 'Upload to S3'}
               </button>
             </div>
 
@@ -174,7 +174,7 @@ function App() {
             )}
 
             <div className="gallery">
-              <h3>📷 Uploaded Files ({files.length})</h3>
+              <h3>Uploaded Files ({files.length})</h3>
               {files.length === 0 ? (
                 <p className="empty">No files uploaded yet</p>
               ) : (
@@ -204,10 +204,10 @@ function App() {
         )}
 
         <div className="info">
-          <p>✅ React + TypeScript + Vite</p>
-          <p>✅ Express.js Backend API</p>
-          <p>✅ AWS S3 Storage</p>
-          <p>✅ PostgreSQL Database</p>
+          <p>React + TypeScript + Vite</p>
+          <p>Express.js Backend API</p>
+          <p>AWS S3 Storage</p>
+          <p>PostgreSQL Database</p>
         </div>
       </div>
     </>

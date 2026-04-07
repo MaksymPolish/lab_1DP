@@ -97,7 +97,7 @@ app.post('/api/upload', upload.single('file'), async (req, res) => {
       }
     });
 
-    console.log(`✅ File uploaded: ${fileRecord.filename} (${fileRecord.size} bytes)`);
+    console.log(`File uploaded: ${fileRecord.filename} (${fileRecord.size} bytes)`);
   } catch (error) {
     console.error('Upload error:', error);
     res.status(500).json({ error: error.message });
@@ -123,8 +123,8 @@ app.use('/uploads', express.static(uploadDir));
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
-  console.log(`📁 Upload directory: ${uploadDir}`);
-  console.log(`📊 Storage Mode: Local file storage (Demo)`);
-  console.log(`✅ API ready at http://localhost:${PORT}/api`);
+  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Upload directory: ${uploadDir}`);
+  console.log(`Storage Mode: Local file storage (Demo)`);
+  console.log(`API ready at http://localhost:${PORT}/api`);
 });
