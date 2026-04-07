@@ -23,7 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 
-# Terraform
+# Terraform (Lab6)
 terraform/.terraform/
 terraform/.terraform.lock.hcl
 terraform/terraform.tfvars
@@ -34,6 +34,23 @@ terraform/override.tf
 terraform/override.tf.json
 terraform/*_override.tf
 terraform/*_override.tf.json
+
+# Terraform (Lab7)
+terraform-lab7/.terraform/
+terraform-lab7/.terraform.lock.hcl
+terraform-lab7/terraform.tfvars
+terraform-lab7/*.tfstate
+terraform-lab7/*.tfstate.*
+terraform-lab7/crash.log
+terraform-lab7/lab7_key
+terraform-lab7/lab7_key.pub
+terraform-lab7/override.tf
+terraform-lab7/override.tf.json
+terraform-lab7/*_override.tf
+terraform-lab7/*_override.tf.json
+
 .env
 .env.*
 terraform/plan_output.json
+lab7-ec2-key.pem
+Лабораторна робота №7_ Розгортання вебзастосунків на AWS EC2.docx.md
